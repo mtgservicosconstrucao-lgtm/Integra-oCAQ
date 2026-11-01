@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="pt-BR" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<title>IntegraÃ§Ã£o Departamento CAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#05090f;overflow:hidden}
+#palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center}
+#palco>section{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .45s}
+#palco>section.on{opacity:1;pointer-events:auto}
+.seta{flex:none;clip-path:polygon(0 30%,60% 30%,60% 0,100% 50%,60% 100%,60% 70%,0 70%)}
+#nav{position:fixed;bottom:14px;right:16px;display:flex;gap:8px;align-items:center;font:600 14px 'IBM Plex Sans',Arial,sans-serif;color:#C3CEDF;opacity:.35;transition:opacity .2s}
+#nav:hover{opacity:1}
+#nav button{background:#16234A;color:#F4F6F8;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="palco">
+<section id="capa" data-transition="fade" style="background:linear-gradient(135deg, #142a52 0%, #0E1830 55%, #0a1226 100%);color:#F4F6F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:32px">
+<img src="logo-brascon.jpg" alt="Logo Brascon" style="width:136px;height:143px;object-fit:contain;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,0.35)">
+<div style="display:flex;flex-direction:column;gap:4px">
+<p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:44px;font-weight:700;letter-spacing:2px;line-height:1">CONSTRUTORA BRASCON</p>
+<p style="font-size:24px;font-weight:600;letter-spacing:6px;color:#E0A526">DEPARTAMENTO CAQ</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-size:32px;font-weight:600;letter-spacing:4px;color:#E0A526">INTEGRAÇÃO</p>
+<h1 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1.05;color:#F4F6F8">Departamento CAQ</h1>
+<p style="font-size:44px;color:#C3CEDF;line-height:1.3">Controle de Custo · Assistência Técnica · Qualidade</p>
+</div>
+<svg aria-label="Caricatura: a equipe do CAQ de capacete, uma pessoa de cada frente" viewBox="0 0 540 500" width="540" height="500" style="position:absolute;left:1240px;top:230px;width:540px;height:500px" xmlns="http://www.w3.org/2000/svg">
+<circle cx="270" cy="270" r="230" fill="#ffffff" opacity="0.06"/>
+<path d="M60 460 v-150 h70 v150 z M150 460 v-220 h80 v220 z M330 460 v-180 h70 v180 z M420 460 v-120 h70 v120 z" fill="#ffffff" opacity="0.07"/>
+<g transform="translate(120 250) scale(0.95)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1F7A4D"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C78E14"/>
+</g>
+<g transform="translate(420 250) scale(0.95)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#B4531F"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C78E14"/>
+</g>
+<g transform="translate(270 200) scale(1.15)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1D4F8F"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><circle cx="-30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-18 50 q18 18 36 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#F4F6F8"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C3CEDF"/>
+<path d="M60 120 l40 -80" stroke="#F2C6A2" stroke-width="22" stroke-linecap="round"/><circle cx="104" cy="34" r="16" fill="#F2C6A2"/>
+</g>
+</svg>
+
+</section>
+
+<section id="oqueecaq" data-transition="fade" style="background:#F4F6F8;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#9A6A00">O DEPARTAMENTO</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1;color:#0E1830">Três frentes que cuidam da obra do orçamento à entrega, e depois dela</h2>
+</div>
+<div style="display:flex;gap:32px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFCFD;padding:48px;border-radius:16px;border-top:8px solid #1F7A4D;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<div style="display:flex;align-items:center;justify-content:space-between"><p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1;color:#1F7A4D">C</p><svg aria-label="Caricatura de uma pessoa da frente, de capacete" viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg"><g transform="translate(80 40) scale(0.62)"><path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1F7A4D"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/><circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C78E14"/></g><circle cx="160" cy="60" r="30" fill="#E0A526"/><path d="M160 44 v32 M152 52 q8-8 16 0 q0 8-8 8 q-8 0-8 8 q8 8 16 0" stroke="#7A5200" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15;color:#0E1830">Controle de Custo</h3>
+<p style="font-size:32px;line-height:1.4;color:#4A5568">Orçamento, acompanhamento dos gastos e tendência do custo final</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFCFD;padding:48px;border-radius:16px;border-top:8px solid #B4531F;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<div style="display:flex;align-items:center;justify-content:space-between"><p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1;color:#B4531F">A</p><svg aria-label="Caricatura de uma pessoa da frente, de capacete" viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg"><g transform="translate(80 40) scale(0.62)"><path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#B4531F"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/><circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C78E14"/></g><g transform="translate(160 70) rotate(35)"><rect x="-7" y="0" width="14" height="70" rx="6" fill="#8C97A8"/><path d="M-20 -8 a20 20 0 1 1 40 0 l-9 3 l-5 -12 h-12 l-5 12 z" fill="#8C97A8"/></g></svg></div>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15;color:#0E1830">Assistência Técnica</h3>
+<p style="font-size:32px;line-height:1.4;color:#4A5568">Atendimento ao cliente depois da entrega: chamado, vistoria e reparo</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FBFCFD;padding:48px;border-radius:16px;border-top:8px solid #1D4F8F;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<div style="display:flex;align-items:center;justify-content:space-between"><p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1;color:#1D4F8F">Q</p><svg aria-label="Caricatura de uma pessoa da frente, de capacete" viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg"><g transform="translate(80 40) scale(0.62)"><path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1D4F8F"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/><circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C78E14"/></g><rect x="132" y="40" width="56" height="74" rx="8" fill="#F4F6F8" stroke="#14213D" stroke-width="3"/><path d="M142 62 l6 6 l12 -12" stroke="#1F7A4D" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M142 88 l6 6 l12 -12" stroke="#1F7A4D" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15;color:#0E1830">Qualidade</h3>
+<p style="font-size:32px;line-height:1.4;color:#4A5568">Vistorias durante a obra: check list, falhas com foto e revistoria</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7280">CAQ = Controle de Custo · Assistência Técnica · Qualidade</p>
+
+</section>
+
+<section id="custo" data-transition="push" style="background:#F4F6F8;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:0;display:grid;grid-template-columns:560px 1fr">
+<div style="background:linear-gradient(160deg, #23935C 0%, #1F7A4D 60%, #165A39 100%);padding:128px 64px 128px 128px;display:flex;flex-direction:column;justify-content:space-between">
+<svg aria-label="Caricatura: pessoa do Controle de Custo com calculadora e gráfico subindo" viewBox="0 0 400 380" width="400" height="380" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="170" fill="#ffffff" opacity="0.12"/>
+<rect x="250" y="200" width="30" height="80" rx="6" fill="#CFEBDB"/><rect x="290" y="160" width="30" height="120" rx="6" fill="#E6F4EC"/><rect x="330" y="110" width="30" height="170" rx="6" fill="#ffffff"/>
+<path d="M245 180 L300 130 L325 150 L370 90" stroke="#E0A526" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M350 86 L374 86 L374 110" stroke="#E0A526" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(140 170)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#0E1830"/><path d="M-20 98 l20 26 l20 -26 z" fill="#ffffff"/>
+<rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/>
+<circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<path d="M-52 22 q4-58 52-58 q48 0 52 58 q-14-30-52-30 q-38 0-52 30 z" fill="#3B2A20"/>
+<circle cx="-18" cy="28" r="6" fill="#2A1D16"/><circle cx="18" cy="28" r="6" fill="#2A1D16"/>
+<path d="M-32 14 q14-8 26 0" stroke="#2A1D16" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M6 14 q14-8 26 0" stroke="#2A1D16" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="-30" cy="46" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="46" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="18" y="112" width="74" height="96" rx="10" fill="#F4F6F8" stroke="#14213D" stroke-width="4"/><rect x="28" y="122" width="54" height="22" rx="4" fill="#1F7A4D"/>
+<circle cx="38" cy="160" r="6" fill="#14213D"/><circle cx="55" cy="160" r="6" fill="#14213D"/><circle cx="72" cy="160" r="6" fill="#14213D"/><circle cx="38" cy="178" r="6" fill="#14213D"/><circle cx="55" cy="178" r="6" fill="#14213D"/><circle cx="72" cy="178" r="6" fill="#E0A526"/>
+<circle cx="10" cy="160" r="16" fill="#F2C6A2"/>
+</g>
+<circle cx="70" cy="80" r="34" fill="#E0A526"/><circle cx="70" cy="80" r="24" fill="none" stroke="#C78E14" stroke-width="4"/><path d="M70 64 v32 M62 72 q8-8 16 0 q0 8-8 8 q-8 0-8 8 q8 8 16 0" stroke="#7A5200" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#CFEBDB">FRENTE 1</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.05;color:#F4F6F8">Controle de Custo</h2>
+</div>
+</div>
+<div style="padding:128px 128px 128px 96px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<h3 style="font-size:44px;font-weight:600;color:#0E1830">O que fazemos</h3>
+<div style="display:flex;flex-direction:column;gap:0">
+<p style="font-size:32px;line-height:1.4;padding:20px 0;border-bottom:2px solid #DDE3EA"><b>Orçamento da obra</b>: quantitativos, preços e composição do custo</p>
+<p style="font-size:32px;line-height:1.4;padding:20px 0;border-bottom:2px solid #DDE3EA"><b>Orçado x realizado</b>: acompanhar os gastos mês a mês</p>
+<p style="font-size:32px;line-height:1.4;padding:20px 0;border-bottom:2px solid #DDE3EA"><b>Histograma</b>: mão de obra e recursos ao longo da obra</p>
+<p style="font-size:32px;line-height:1.4;padding:20px 0;border-bottom:2px solid #DDE3EA"><b>Tendência do custo</b>: quanto a obra vai custar no fim</p>
+<p style="font-size:32px;line-height:1.4;padding:20px 0"><b>Reuniões mensais com as obras</b> para atualizar a tendência do custo de obra</p>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#1F7A4D;font-weight:600">Resultado: decidir antes do estouro, não depois.</p>
+</div>
+
+</section>
+
+<section id="assistencia" data-transition="push" style="background:#F4F6F8;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:0;display:grid;grid-template-columns:560px 1fr">
+<div style="background:linear-gradient(160deg, #C8642D 0%, #B4531F 60%, #8C3F17 100%);padding:128px 64px 128px 128px;display:flex;flex-direction:column;justify-content:space-between">
+<svg aria-label="Caricatura: técnico da Assistência Técnica de capacete com chave e caixa de ferramentas" viewBox="0 0 400 380" width="400" height="380" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="170" fill="#ffffff" opacity="0.12"/>
+<path d="M270 150 l60 -50 l60 50 v120 h-120 z" fill="#FBE7DC"/><rect x="315" y="210" width="30" height="60" rx="4" fill="#B4531F"/><rect x="285" y="170" width="26" height="24" rx="3" fill="#F3B993"/>
+<g transform="translate(150 170)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#14213D"/><rect x="-75" y="140" width="150" height="14" fill="#E0A526"/>
+<rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/>
+<circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/>
+<circle cx="-30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-18 50 q18 18 36 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C78E14"/><rect x="-6" y="-44" width="12" height="40" rx="5" fill="#C78E14"/>
+<g transform="translate(70 70) rotate(35)"><rect x="-9" y="0" width="18" height="110" rx="8" fill="#C3CEDF"/><path d="M-26 -10 a26 26 0 1 1 52 0 l-12 4 l-6 -16 h-16 l-6 16 z" fill="#C3CEDF"/></g>
+<circle cx="64" cy="128" r="16" fill="#F2C6A2"/>
+</g>
+<g transform="translate(40 290)"><rect x="0" y="20" width="110" height="60" rx="8" fill="#E0A526"/><rect x="0" y="20" width="110" height="16" rx="6" fill="#C78E14"/><path d="M35 20 v-12 h40 v12" stroke="#7A5200" stroke-width="6" fill="none"/></g>
+</svg>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#F6D3BF">FRENTE 2</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.05;color:#F4F6F8">Assistência Técnica</h2>
+</div>
+</div>
+<div style="padding:112px 128px 112px 96px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<h3 style="font-size:44px;font-weight:600;color:#0E1830">O que fazemos</h3>
+<div style="display:flex;flex-direction:column;gap:0">
+<p style="font-size:28px;line-height:1.35;padding:14px 0;border-bottom:2px solid #DDE3EA"><b>Recebe o chamado</b> do cliente depois da entrega</p>
+<p style="font-size:28px;line-height:1.35;padding:14px 0;border-bottom:2px solid #DDE3EA"><b>Vistoria no local</b> para entender a causa</p>
+<p style="font-size:28px;line-height:1.35;padding:14px 0;border-bottom:2px solid #DDE3EA"><b>Programa e acompanha o reparo</b> até o cliente aprovar</p>
+<p style="font-size:28px;line-height:1.35;padding:14px 0"><b>Registra causa e custo</b> para não repetir nas próximas obras</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;background:#FBE7DC;padding:28px 32px;border-radius:16px;border-left:8px solid #B4531F">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#8C3F17">LOGÍSTICA DO ATENDIMENTO</p>
+<p style="font-size:28px;line-height:1.4;color:#14213D"><b>Mão de obra emprestada das nossas obras:</b> a equipe do reparo vem das obras em andamento.</p>
+<p style="font-size:28px;line-height:1.4;color:#14213D">Por isso <b>combinamos com cada obra</b> quem vai, quando e por quanto tempo, junto com a agenda do cliente e o material.</p>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#14213D"><b>Prazo do atendimento:</b> varia conforme a complexidade do reparo e a disponibilidade da mão de obra fornecida pela obra.</p>
+<p style="font-size:28px;line-height:1.4;color:#B4531F;font-weight:600">Resultado: cliente atendido e lições para a próxima obra.</p>
+</div>
+
+</section>
+
+<section id="qualidade" data-transition="push" style="background:#F4F6F8;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:0;display:grid;grid-template-columns:560px 1fr">
+<div style="background:linear-gradient(160deg, #2A62AD 0%, #1D4F8F 60%, #153A6B 100%);padding:128px 64px 128px 128px;display:flex;flex-direction:column;justify-content:space-between">
+<svg aria-label="Caricatura: vistoriador da Qualidade de capacete com prancheta e lupa" viewBox="0 0 400 380" width="400" height="380" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="170" fill="#ffffff" opacity="0.12"/>
+<g transform="translate(160 170)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#0E1830"/><rect x="-75" y="140" width="150" height="14" fill="#E0A526"/>
+<rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/>
+<circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/>
+<circle cx="-30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-14 52 q14 12 28 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#F4F6F8"/><rect x="-66" y="10" width="132" height="14" rx="7" fill="#C3CEDF"/><rect x="-6" y="-44" width="12" height="40" rx="5" fill="#C3CEDF"/>
+<rect x="-118" y="100" width="90" height="120" rx="10" fill="#F4F6F8" stroke="#14213D" stroke-width="4"/><rect x="-92" y="92" width="38" height="16" rx="5" fill="#8C97A8"/>
+<path d="M-106 132 l8 8 l14 -16" stroke="#1F7A4D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="-78" y="128" width="40" height="8" rx="4" fill="#C3CEDF"/>
+<path d="M-106 162 l8 8 l14 -16" stroke="#1F7A4D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="-78" y="158" width="40" height="8" rx="4" fill="#C3CEDF"/>
+<path d="M-104 186 l16 16 M-88 186 l-16 16" stroke="#B3261E" stroke-width="6" stroke-linecap="round"/><rect x="-78" y="190" width="40" height="8" rx="4" fill="#C3CEDF"/>
+<circle cx="-40" cy="150" r="16" fill="#F2C6A2"/>
+</g>
+<g transform="translate(300 150)"><circle cx="0" cy="0" r="44" fill="#DCE8F7" opacity="0.55" stroke="#ffffff" stroke-width="10"/><rect x="26" y="26" width="18" height="70" rx="8" transform="rotate(-45 35 35)" fill="#E0A526"/></g>
+</svg>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#C6D8F0">FRENTE 3</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.05;color:#F4F6F8">Qualidade</h2>
+</div>
+</div>
+<div style="padding:112px 128px 112px 96px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<h3 style="font-size:44px;font-weight:600;color:#0E1830">Nossa rotina mensal</h3>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:24px;align-items:center;background:#FBFCFD;padding:22px 28px;border-radius:14px;border-left:8px solid #1D4F8F;box-shadow:0 6px 18px rgba(14,24,48,0.06)"><p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#1D4F8F">1</p><p style="font-size:30px;line-height:1.35"><b>Auditorias nas obras todo mês</b>, registradas em sistema próprio</p></div>
+<div style="display:flex;gap:24px;align-items:center;background:#FBFCFD;padding:22px 28px;border-radius:14px;border-left:8px solid #1D4F8F;box-shadow:0 6px 18px rgba(14,24,48,0.06)"><p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#1D4F8F">2</p><p style="font-size:30px;line-height:1.35"><b>Reuniões mensais</b> para apresentar os resultados das auditorias</p></div>
+<div style="display:flex;gap:24px;align-items:center;background:#FBFCFD;padding:22px 28px;border-radius:14px;border-left:8px solid #E0A526;box-shadow:0 6px 18px rgba(14,24,48,0.06)"><p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#9A6A00">3</p><p style="font-size:30px;line-height:1.35"><b>Check list implantado na obra do My Way</b>, pelo app MTG SISTEMAS</p></div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#4A5568">No check list: formulários padrão por unidade, falhas com foto, local e gravidade, revistoria até a correção e liberação para a vistoria do cliente.</p>
+<p style="font-size:30px;line-height:1.4;color:#1D4F8F;font-weight:600">Resultado: entrega sem surpresa para o cliente.</p>
+</div>
+
+</section>
+
+<section id="fluxo" data-transition="fade" style="background:#0E1830;color:#F4F6F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:64px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#E0A526">COMO TRABALHAMOS JUNTOS</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1;color:#F4F6F8">Cada frente alimenta a outra</h2>
+</div>
+<div style="display:flex;align-items:center;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16234A;padding:36px;border-radius:16px;border-top:8px solid #1F7A4D">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#8FD9B3">CONTROLE DE CUSTO</p>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15">Orçamento</h3>
+<p style="font-size:24px;line-height:1.4;color:#C3CEDF">Define quanto a obra pode custar</p>
+</div>
+<div class="seta" style="background:#E0A526;width:56px;height:32px"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16234A;padding:36px;border-radius:16px;border-top:8px solid #1D4F8F">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#A9C6EE">QUALIDADE</p>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15">Obra</h3>
+<p style="font-size:24px;line-height:1.4;color:#C3CEDF">Vistoria, corrige e libera as unidades</p>
+</div>
+<div class="seta" style="background:#E0A526;width:56px;height:32px"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16234A;padding:36px;border-radius:16px;border-top:8px solid #E0A526">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#F0D38A">CLIENTE</p>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15">Entrega</h3>
+<p style="font-size:24px;line-height:1.4;color:#C3CEDF">Recebe a unidade vistoriada</p>
+</div>
+<div class="seta" style="background:#E0A526;width:56px;height:32px"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16234A;padding:36px;border-radius:16px;border-top:8px solid #B4531F">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#F3B993">ASSISTÊNCIA TÉCNICA</p>
+<h3 style="font-size:44px;font-weight:600;line-height:1.15">Pós-obra</h3>
+<p style="font-size:24px;line-height:1.4;color:#C3CEDF">Atende os chamados do cliente</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#F4F6F8;background:#16234A;padding:28px 36px;border-radius:16px;border-left:8px solid #E0A526">O que a Assistência Técnica aprende <b>volta</b> para a Qualidade (formulários mais completos) e para o Controle de Custo (orçamentos mais precisos).</p>
+<svg aria-label="Caricatura: três pessoas das frentes em volta de setas em ciclo" viewBox="0 0 320 240" width="320" height="240" style="position:absolute;left:1472px;top:40px;width:320px;height:240px" xmlns="http://www.w3.org/2000/svg">
+<path d="M160 40 a80 80 0 1 1 -76 104" stroke="#E0A526" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M66 128 l18 20 l20 -18" stroke="#E0A526" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(160 64) scale(0.42)"><path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1F7A4D"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/><circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/></g>
+<g transform="translate(262 150) scale(0.42)"><path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1D4F8F"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/><circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#F4F6F8"/></g>
+<g transform="translate(58 150) scale(0.42)"><path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#B4531F"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/><circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><path d="M-16 50 q16 16 32 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-56 16 q0-62 56-62 q56 0 56 62 z" fill="#E0A526"/></g>
+</svg>
+
+</section>
+
+<section id="ferramenta" data-transition="fade" style="background:#F4F6F8;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#9A6A00">A FERRAMENTA</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1;color:#0E1830;width:1280px">MTG SISTEMAS: o app do CAQ, no celular e no computador</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;align-items:center;gap:24px;background:#FBFCFD;padding:28px 32px;border-radius:16px;border-left:8px solid #1D4F8F">
+<div style="display:flex;flex-direction:column;gap:6px;flex:1">
+<h3 style="font-size:32px;font-weight:600;color:#0E1830">QUALIDADE</h3>
+<p style="font-size:24px;color:#4A5568">Check Obras - Formulários: vistorias, falhas com foto, revistoria, relatórios</p>
+</div>
+<p style="font-size:24px;font-weight:600;color:#1F7A4D;background:#E3F2EA;padding:6px 16px;border-radius:999px;white-space:nowrap">Em uso</p>
+</div>
+<div style="display:flex;align-items:center;gap:24px;background:#FBFCFD;padding:28px 32px;border-radius:16px;border-left:8px solid #1F7A4D">
+<div style="display:flex;flex-direction:column;gap:6px;flex:1">
+<h3 style="font-size:32px;font-weight:600;color:#0E1830">CONTROLE DE CUSTO</h3>
+<p style="font-size:24px;color:#4A5568">Orçamento, Histograma e Tendência Custo de Obra</p>
+</div>
+<p style="font-size:24px;font-weight:600;color:#6A4A00;background:#F8EBC9;padding:6px 16px;border-radius:999px;white-space:nowrap">Em breve</p>
+</div>
+<div style="display:flex;align-items:center;gap:24px;background:#FBFCFD;padding:28px 32px;border-radius:16px;border-left:8px solid #8B5A2B">
+<div style="display:flex;flex-direction:column;gap:6px;flex:1">
+<h3 style="font-size:32px;font-weight:600;color:#0E1830">PLANEJAMENTO</h3>
+<p style="font-size:24px;color:#4A5568">Previsto x realizado de cada etapa da obra</p>
+</div>
+<p style="font-size:24px;font-weight:600;color:#6A4A00;background:#F8EBC9;padding:6px 16px;border-radius:999px;white-space:nowrap">Em breve</p>
+</div>
+<div style="display:flex;align-items:center;gap:24px;background:#FBFCFD;padding:28px 32px;border-radius:16px;border-left:8px solid #6B7280">
+<div style="display:flex;flex-direction:column;gap:6px;flex:1">
+<h3 style="font-size:32px;font-weight:600;color:#0E1830">ALMOXARIFADO</h3>
+<p style="font-size:24px;color:#4A5568">Controle dos materiais da obra</p>
+</div>
+<p style="font-size:24px;font-weight:600;color:#6A4A00;background:#F8EBC9;padding:6px 16px;border-radius:999px;white-space:nowrap">Em breve</p>
+</div>
+</div>
+<div style="display:flex;gap:24px">
+<p style="flex:1;font-size:24px;line-height:1.4;color:#14213D;background:#E6ECF4;padding:20px 24px;border-radius:12px"><b>Mesma senha</b> no celular e no computador</p>
+<p style="flex:1;font-size:24px;line-height:1.4;color:#14213D;background:#E6ECF4;padding:20px 24px;border-radius:12px"><b>Funciona sem internet</b> e atualiza sozinho</p>
+<p style="flex:1;font-size:24px;line-height:1.4;color:#14213D;background:#E6ECF4;padding:20px 24px;border-radius:12px"><b>Toda a equipe</b> vê na hora o que mudou</p>
+</div>
+<svg aria-label="Caricatura: pessoa sorrindo com o celular mostrando o app" viewBox="0 0 320 300" width="320" height="300" style="position:absolute;left:1472px;top:72px;width:320px;height:300px" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="160" r="130" fill="#1D4F8F" opacity="0.08"/>
+<g transform="translate(130 110) scale(0.85)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1D4F8F"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<path d="M-52 24 q2-60 52-60 q50 0 52 60 q-10-26-52-26 q-42 0-52 26 z" fill="#3B2A20"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><circle cx="-30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-18 50 q18 18 36 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="44" y="70" width="70" height="124" rx="12" fill="#14213D"/><rect x="51" y="80" width="56" height="100" rx="6" fill="#F4F6F8"/>
+<rect x="57" y="88" width="44" height="12" rx="3" fill="#1D4F8F"/>
+<path d="M60 114 l6 6 l10 -10" stroke="#1F7A4D" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="80" y="112" width="20" height="6" rx="3" fill="#C3CEDF"/>
+<path d="M60 136 l6 6 l10 -10" stroke="#1F7A4D" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="80" y="134" width="20" height="6" rx="3" fill="#C3CEDF"/>
+<rect x="58" y="154" width="42" height="16" rx="4" fill="#E0A526"/>
+<circle cx="48" cy="160" r="16" fill="#F2C6A2"/>
+</g>
+</svg>
+
+</section>
+
+<section id="integracao" data-transition="fade" style="background:#F4F6F8;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#9A6A00">PRIMEIROS PASSOS</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.1;color:#0E1830">Sua primeira semana no CAQ</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:16px;background:#FBFCFD;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#E0A526">1</p>
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#0E1830">Instalar o app</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Abrir o convite, criar nome e senha e baixar o MTG SISTEMAS</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#FBFCFD;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#E0A526">2</p>
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#0E1830">Conhecer as obras</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Empreendimentos, formulários e o Manual do APP (botão Ajuda)</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#FBFCFD;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#E0A526">3</p>
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#0E1830">Acompanhar em campo</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Uma vistoria e uma revistoria com a equipe da Qualidade</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#FBFCFD;padding:40px 32px;border-radius:16px;box-shadow:0 8px 24px rgba(14,24,48,0.08)">
+<p style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#E0A526">4</p>
+<h3 style="font-size:32px;font-weight:600;line-height:1.2;color:#0E1830">Custo e Assistência</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Ver um orçamento e o fluxo de um chamado [com quem]</p>
+</div>
+</div>
+<svg aria-label="Caricatura: pessoa nova no CAQ acenando, com crachá" viewBox="0 0 320 240" width="320" height="240" style="position:absolute;left:1472px;top:72px;width:320px;height:240px" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="130" r="110" fill="#E0A526" opacity="0.12"/>
+<g transform="translate(150 70) scale(0.75)">
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#14213D"/><rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<path d="M-52 26 q-6-66 52-66 q58 0 52 66 q-8-30-52-34 q-44 4-52 34 z" fill="#5A3A26"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><circle cx="-30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-20 48 q20 22 40 0" stroke="#7A3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="-22" y="122" width="44" height="54" rx="6" fill="#F4F6F8"/><rect x="-22" y="122" width="44" height="14" rx="5" fill="#E0A526"/><circle cx="0" cy="152" r="9" fill="#C3CEDF"/><rect x="-14" y="164" width="28" height="5" rx="2" fill="#C3CEDF"/>
+<path d="M62 120 q30-40 44-90" stroke="#F2C6A2" stroke-width="22" stroke-linecap="round" fill="none"/><circle cx="108" cy="26" r="17" fill="#F2C6A2"/>
+<path d="M130 6 q10 8 6 20 M138 -8 q16 12 10 32" stroke="#E0A526" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+</svg>
+
+</section>
+
+<section id="contato" data-transition="fade" style="background:linear-gradient(135deg, #142a52 0%, #0E1830 55%, #0a1226 100%);color:#F4F6F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:4px;color:#E0A526">BEM-VINDO AO CAQ</p>
+<h2 style="font-family:'Barlow Condensed', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1.05;color:#F4F6F8">Fale com a gente</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16234A;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#C3CEDF">RESPONSÁVEL PELO CAQ</p>
+<h3 style="font-size:44px;font-weight:600">[Nome]</h3>
+<p style="font-size:32px;color:#C3CEDF">[e-mail] · [telefone]</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16234A;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;color:#C3CEDF">DÚVIDAS NO APP</p>
+<h3 style="font-size:44px;font-weight:600">Botão Ajuda</h3>
+<p style="font-size:32px;color:#C3CEDF">Manual do APP e Dúvidas pelo WhatsApp: +55 11 91153-0033</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:20px">
+<img src="logo-brascon.jpg" alt="Logo Brascon" style="width:72px;height:76px;object-fit:contain;border-radius:10px">
+<p style="font-size:24px;color:#C3CEDF">Construtora Brascon · Departamento CAQ · Controle de Custo, Assistência Técnica e Qualidade</p>
+</div>
+<svg aria-label="Caricatura: atendente com fone de ouvido de telemarketing" viewBox="0 0 320 300" width="320" height="300" style="position:absolute;left:1472px;top:96px;width:320px;height:300px" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="160" r="130" fill="#ffffff" opacity="0.08"/>
+<g transform="translate(160 110) scale(0.9)">
+<path d="M-62 120 c-12-60-8-120 8-150 c20-36 88-36 108 0 c16 30 20 90 8 150 z" fill="#3B2A20"/>
+<path d="M-75 190 q0-95 75-95 q75 0 75 95 z" fill="#1D4F8F"/><path d="M-20 98 l20 26 l20 -26 z" fill="#ffffff"/>
+<rect x="-14" y="66" width="28" height="30" rx="10" fill="#E2B08C"/><circle cx="0" cy="30" r="52" fill="#F2C6A2"/>
+<path d="M-52 22 q2-58 52-58 q50 0 52 58 q-12-30-52-30 q-40 0-52 30 z" fill="#3B2A20"/>
+<circle cx="-18" cy="30" r="6" fill="#2A1D16"/><circle cx="18" cy="30" r="6" fill="#2A1D16"/><circle cx="-30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/><circle cx="30" cy="48" r="8" fill="#F4A6A0" opacity="0.6"/>
+<path d="M-16 50 q16 16 32 0" stroke="#B5563F" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M-58 26 c0-80 116-80 116 0" stroke="#F4F6F8" stroke-width="9" fill="none" stroke-linecap="round"/>
+<rect x="-70" y="16" width="20" height="34" rx="8" fill="#F4F6F8"/><rect x="50" y="16" width="20" height="34" rx="8" fill="#F4F6F8"/>
+<path d="M-60 48 c4 26 22 32 44 28" stroke="#F4F6F8" stroke-width="6" fill="none" stroke-linecap="round"/><rect x="-20" y="70" width="16" height="10" rx="5" fill="#E0A526"/>
+</g>
+<g transform="translate(262 60)"><circle cx="0" cy="0" r="30" fill="#ffffff"/><path d="M0 -24 a24 24 0 0 0 -20.8 36 l-3.2 11.5 l12 -3.1 a24 24 0 1 0 12 -44.4z" fill="#1f9d55"/><path d="M-9 -9 c-1-2-2-2-3-2 h-2 c-1 0-2 0-3 1 c-1 1-3 3-3 7 s3 8 3 9 c1 1 6 9 14 12 c7 3 8 2 10 2 c2 0 5-2 6-4 c1-2 1-4 0-4 l-6-3 c-1 0-1 0-2 1 l-3 3 c0 1-1 1-2 0 c-1 0-4-1-7-4 c-3-2-4-5-5-6 c0-1 0-1 1-2 l1-1 l1-2 c0-1 0-1 0-2 l-3-6z" fill="#ffffff"/></g>
+</svg>
+
+</section>
+
+</div>
+<div id="nav"><button id="ant" aria-label="Slide anterior">&#8592;</button><span id="num"></span><button id="prox" aria-label="PrÃ³ximo slide">&#8594;</button><button id="tela" aria-label="Tela cheia">&#9974;</button></div>
+<script>
+(function(){
+  var s=[].slice.call(document.querySelectorAll('#palco>section')),i=0,p=document.getElementById('palco');
+  function escala(){var k=Math.min(innerWidth/1920,innerHeight/1080);p.style.transform='translate(-50%,-50%) scale('+k+')';}
+  function vai(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,j){e.classList.toggle('on',j===i)});document.getElementById('num').textContent=(i+1)+' / '+s.length;history.replaceState(null,'','#'+(i+1));}
+  addEventListener('resize',escala);escala();
+  addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();vai(i+1)}else if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();vai(i-1)}else if(e.key==='Home')vai(0);else if(e.key==='End')vai(s.length-1);else if(e.key==='f')tela();});
+  var x0=null;addEventListener('touchstart',function(e){x0=e.touches[0].clientX});addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)vai(i+(d<0?1:-1));x0=null});
+  function tela(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen().catch(function(){})}
+  document.getElementById('ant').onclick=function(){vai(i-1)};document.getElementById('prox').onclick=function(){vai(i+1)};document.getElementById('tela').onclick=tela;
+  vai((parseInt(location.hash.slice(1),10)||1)-1);
+})();
+</script>
+</body>
+</html>
